@@ -1,0 +1,444 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body{
+    background: #003e71 url(https://www.loteriasantafe.gov.ar/templates/loteria/images/fondo.jpg) center 0px repeat-x;
+    background-attachment: fixed;
+    background-position: top;
+    color: #000000;
+    text-align: left;
+    display: grid;
+    place-items: center; 
+    margin: 0;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    width:960px;
+    height:auto;
+    background-color: #011e35;
+    justify-content:center; 
+}
+.nav>ul>a{
+    border-right: #0071b7 1px solid;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.nav{
+    color: #fff;
+}
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav li {
+    display: inline-block;
+    margin-right: 10px; 
+    border-right: #0071b7 1px solid;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.nav li a:hover{
+    color:green;
+    text-decoration: underline solid 2px red;
+}
+.nav li:last-child {
+    margin-right: 0; 
+}
+.nav a, .otro li a {
+    text-decoration: none;
+    color: white;
+    font-size:0.7rem;
+    font-weight:600px;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    align-items: center;
+}
+.form{
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    position:inherit;
+    top:0vh;
+}
+.search input[type="search"] {
+    margin-right: 10px;
+    border:4px solid #dc0c0c;
+    border-radius: 20px;
+    padding: 8px 15px;
+    box-shadow: 20px 22px 54px 20px rgba(243, 1, 1, 0.1);
+    transition: border-color 0.8s, box-shadow 0.8s, background-color 0.8s;
+    -webkit-transition: border-color 0.8s, box-shadow 0.8s, background-color 0.8s;
+    -moz-transition: border-color 0.8s, box-shadow 0.8s, background-color 0.8s;
+    -ms-transition: border-color 0.8s, box-shadow 0.8s, background-color 0.8s;
+    -o-transition: border-color 0.8s, box-shadow 0.8s, background-color 0.8s;
+}
+.search input[type="search"]:hover {
+    background-color: #0417e9;
+    color: #fff;
+}
+.search input[type="submit"] {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.nav2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-content: center;
+    padding-top:30px;
+    padding-left:90px;
+}
+.nav2 ul li a{
+    display: block;
+    background: url(https://www.loteriasantafe.gov.ar/templates/loteria/images/tab-menu.png) center no-repeat;
+    border-top: #ffffff 1px solid;
+    border-left: #ffffff 1px solid;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-border-radius: 2px 2px 1px 1px;
+    -o-border-radius: 2px 2px 1px 1px;
+    -webkit-border-radius: 2px 2px 1px 1px;
+    border-radius: 2px 2px 1px 1px;
+    color: #38373a;
+    margin-right:0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:0.7rem;
+    width:133px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 2px;
+    text-decoration: none;
+}
+.nav2 ul li a:hover{
+    color:green;
+    text-decoration: underline solid 5px red;
+}
+.otro {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #be0926;
+    color: #ffff;
+    width: 100%;
+    height:auto;
+    padding:7px;
+    box-sizing: border-box;
+    padding-top:20px;
+}
+.otro ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.otro li {
+    margin-right: 10px;
+    text-transform:uppercase;
+    font-size:0.7rem;
+    font-weight: 600;
+    list-style: none;
+}
+.otro li a {
+    text-decoration: none;
+    color: white;
+}
+.otro li a:hover{
+    text-decoration: underline solid 5px green;
+}
+.banner{
+    width: 960px;
+    padding: 0px;
+    margin: 0 auto;
+    height: 220px;
+    overflow: hidden;
+    padding-left:12px;
+    padding-top: 10px;
+}
+.main{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    justify-content:center; 
+    width:960px;
+    height:400px;
+    background-color: #dddddd;
+    margin-top:80px;
+    align-self:flex-start;
+}
+.container-parrafo-container-fluid{
+    color:#ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width:auto;
+    display: flex;
+    flex-direction:row;
+    justify-items:center;
+    justify-content:center;
+    font-size:1.1em;
+    background-color: #EC833B;
+    margin-bottom: 20px;
+}
+.container-select-number input[type="number"] {
+    margin:0 10px;
+    border:4px solid #dc0c0c;
+    border-radius: 20px;
+    padding: 8px 15px;
+    box-shadow: 4px 4px rgba(243, 1, 1, 0.1);
+    transition: border-color 0.4s, box-shadow 0.4s, background-color 0.8s;
+    -webkit-transition: border-color 0.4s, box-shadow 0.4s, background-color 0.8s;
+    -moz-transition: border-color 0.4s, box-shadow 0.4s, background-color 0.8s;
+    -ms-transition: border-color 0.4s, box-shadow 0.4s, background-color 0.8s;
+    -o-transition: border-color 0.4s, box-shadow 0.4s, background-color 0.8s;
+    margin-top: 20px;
+}
+.container-select-number input[type="number"]:hover {
+    background-color: #EC833B;
+    color: #fff;
+}
+.container-select-number input[type="number"] {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mensajeError {
+    position: absolute;
+    bottom:120px;
+    left:0;
+    width: auto;
+    color: red;
+    align-items: center;
+    font-size:1.1rem;
+    gap: 5px;
+    box-shadow: 10px 10px 10px rgb(15, 0, 0);
+}
+.mensajeError box-icon {
+    bottom:0px;
+    width:18px;
+    height:18px;
+    margin-right: 5px;
+}
+.mensajeError,.transition {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.mensajeErrorContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position:absolute;
+    bottom:130px;
+    width:100%;
+    align-items: center;
+    background-color:red;
+    box-shadow: 10px 10px 10px rgb(15, 0, 0);
+}
+.mensajeErrorContainer h1{
+    color: rgb(255, 253, 253);
+    font-size:1.3rem;
+    gap: 5px;
+}
+.containerNumerosJugados{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-items:center;
+    justify-content:center;
+    width:auto;
+    background-color: #EC833B;
+
+}
+.containerNumerosJugados h2, .tituloContainerNumerosJugados,.divContainerNumerosAlAzar h2{
+    list-style: none;
+    color:#ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:1.3rem;
+    margin-bottom:10px;
+    margin-top:18px;
+    margin-right: 10px;
+}
+.divContainerNumerosAlAzar{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-items:center;
+    justify-content:center;
+    width:auto;
+    background-color: #EC833B;
+}
+.container-select-number{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+}
+.container-select-number input{
+    width:900px;
+    margin-right:20px;
+    margin-top:80px;
+}
+.container-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-self:auto;
+    margin-top:80px;
+}
+
+.listaNumerosGenerados {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #be0926;
+}
+
+.listaNumerosGenerados li {
+    margin: 5px;
+    padding: 10px;
+    background-color: #EC833B;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3rem;
+}
+
+
+.content {
+    padding-top:80px; /* Ajusta la cantidad de margen superior que deseas */
+}
+.footer{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items: center!important;
+    align-content: center!important;
+    justify-content: center!important;
+    justify-items: center!important;
+    position: relative;
+    padding-top:50px;
+    background-color: #011e35;
+    width: 960px;
+}
+.footer:hover{
+    background-color: #05487f;
+    font-size:1rem !important;
+    box-shadow: 6px 2px 2px 2px red;
+}
+.text-muted{
+    color: #ffff !important;
+    font-size: 0.8rem !important;
+    margin-left:20px;
+    text-decoration: underline!important;
+}
+
+
+/* ----------------------------------------------
+Generated by AnimatiSS
+Licensed under FreeBSD License
+URL: https://xsgames.co/animatiss
+Twitter: @xsgames_
+---------------------------------------------- */
+
+.shake-horizontal{
+    animation:shake-horizontal 1.2s linear both;
+    -webkit-animation:shake-horizontal 1.2s linear both;
+
+} 
+@keyframes shake-horizontal{
+    0%,100%{
+        transform:translateX(0);
+        -webkit-transform:translateX(0);
+        -moz-transform:translateX(0);
+        -ms-transform:translateX(0);
+        -o-transform:translateX(0);
+    }
+    10%,30%,50%,70%{
+        transform:translateX(-10px);
+        -webkit-transform:translateX(-10px);
+        -moz-transform:translateX(-10px);
+        -ms-transform:translateX(-10px);
+        -o-transform:translateX(-10px);
+    }
+    20%,40%,60%{
+        transform:translateX(10px);
+        -webkit-transform:translateX(10px);
+        -moz-transform:translateX(10px);
+        -ms-transform:translateX(10px);
+        -o-transform:translateX(10px);
+    }
+    80%{
+        transform:translateX(15px)}
+    90%{
+        transform:translateX(-15px);
+        -webkit-transform:translateX(-15px);
+        -moz-transform:translateX(-15px);
+        -ms-transform:translateX(-15px);
+        -o-transform:translateX(-15px);
+}
+    }
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-8-10 13:41:17
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation swing-top-fwd
+ * ----------------------------------------
+ */
+.swing-top-fwd {
+	-webkit-animation: swing-top-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+	animation: swing-top-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+}
+@-webkit-keyframes swing-top-fwd {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+    100% {
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}
+@keyframes swing-top-fwd {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+    100% {
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}
+

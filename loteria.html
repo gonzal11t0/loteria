@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quini 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+<body>
+    <header class="header shake-horizontal">
+        <div class="logo">
+            <a href="loteria.html">
+                <img src="https://www.loteriasantafe.gov.ar/templates/loteria/images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="search">
+            <form class="form">
+                <input  type="search" name="search" placeholder="Buscar...">
+                <input type="submit" value="Buscar" class="btn btn-danger">
+            </form> 
+        </div>
+        <div class="menu">
+            <nav class="nav nav-fill nav-tabs navbar-text">
+                <ul>
+                    <li><a alt="Menu institucional con toda la información que deseas saber" href="https://www.loteriasantafe.gov.ar/index.php/historia">Institucional</a></li>
+                    <li><a alt="Conoce como jugar de manera responsable" href="https://www.loteriasantafe.gov.ar/index.php/juego-responsable">Juego responsable</a></li>
+                    <li><a alt="Conoce otro tipo de juegos como rifas y bingos" href="https://www.loteriasantafe.gov.ar/index.php/rifas-y-bingos">Rifas y bingos</a></li>
+                    <li><a alt="Conoce nuestro proveedores que nos ayudan a realizar nuestro trabajo" href="https://proveedores.loteriasantafe.gov.ar/">Proveedores</a></li>
+                    <li><a alt="Verifica la lista de casinos disponibles para jugar" href="https://www.loteriasantafe.gov.ar/index.php/casinos">Casinos</a></li>
+                    <li><a alt="A.L.E.A" href="https://www.alea.org.ar/">A.L.E.A</a></li>
+                    <li><a alt="Conoce las descargas" href="https://www.loteriasantafe.gov.ar/index.php/descargas">Descargas</a></li>
+                    <li><a alt="Conoce nuestra manera de atencion al cliente" href="https://www.loteriasantafe.gov.ar/index.php/contacto">Atencion al cliente</a></li>
+                </ul>
+            </nav>
+            <nav class="nav2 nav nav-fill nav-tabs navbar-text">
+                <ul>
+                    <li><a alt="Home inicio" href="https://www.loteriasantafe.gov.ar/index.php">Home</a></li>
+                    <li><a alt="Conoce las ultimas noticias" href="https://www.loteriasantafe.gov.ar/index.php/noticias">Noticias</a></li>
+                    <li><a alt="Conoce las reseñas de los distintos juegos" href="https://www.loteriasantafe.gov.ar/index.php/75-aniversario  ">Reseñas de juego</a></li>
+                    <li><a alt="Transparencia" href="https://www.loteriasantafe.gov.ar/index.php/transparencia">Transparencia</a></li>
+                    <li><a alt="Conoce los destinos de fondos" href="https://www.loteriasantafe.gov.ar/index.php/historico">Destinos de fondos</a></li>
+                    <li><a alt="Conoce los resultados" href="https://www.loteriasantafe.gov.ar/index.php/resultados">Resultados</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="otro">
+            <ul>
+                <li><a alt="Conoce el quini 6"    href="https://www.loteriasantafe.gov.ar/index.php/resultados/quini-6">Quini 6</a></li>
+                <li><a alt="Conoce el Brinco"     href="https://www.loteriasantafe.gov.ar/index.php/resultados/brinco">Brinco</a></li>
+                <li><a alt="Conoce el Reglamento" href="https://www.loteriasantafe.gov.ar/index.php/reglamento-quini6">Reglamento</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="banner">
+        <img alt="banner quini 6" src="https://www.loteriasantafe.gov.ar/images/banners/BBB-2023---Slide-Web-Resultados_Slide-Quini6_940x365-resultados.jpg">  
+    </div>
+    <main class="main d-flex justify-content-center align-items-center swing-top-fwd">
+        <div class="container-fluid">
+            <div class="col-2 container-parrafo-container-fluid">
+                <p class="titulo-container-parrafo-container-fluid">Selecciona seis números del 00 al 45:</p>
+            </div>
+            <div class="container-select-number">
+                <input class="input" required placeholder="numero 1" type="number" id="number1" min="0" max="45">
+                <div class="mensajeError" id="errorNumber1"></div>                
+                <input class="input" required placeholder="numero 2" type="number" id="number2" min="0" max="45">
+                <div class="mensajeError" id="errorNumber2"></div>
+                <input class="input" required placeholder="numero 3" type="number" id="number3" min="0" max="45">
+                <div class="mensajeError" id="errorNumber3"></div>               
+                <input class="input" required placeholder="numero 4" type="number" id="number4" min="0" max="45">
+                <div class="mensajeError" id="errorNumber4"></div>
+                <input class="input" required placeholder="numero 5" type="number" id="number5" min="0" max="45">
+                <div class="mensajeError" id="errorNumber5"></div>
+                <input class="input" required placeholder="numero 6" type="number" id="number6" min="0" max="45">
+                <div class="mensajeError" id="errorNumber6"></div>
+            </div>
+            <div class="container-button">
+                <button type="submit" id="button-generar" class="btn btn-danger">Enviar numeros</button>
+            </div>
+            <div class="mensajeErrorContainer" id="mensajeErrorContainer"></div>    
+            <div class="containerNumerosJugados" id="containerNumerosJugados"></div>
+            <div class="containerNumerosGenerados" id="containerNumerosGenerados"></div>
+            <div class="divContainerNumerosAlAzar"></div>
+        </div>
+    </main>
+    <div class="content"></div>
+    <footer class="footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <h1 class="footer1"><a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">Gonzalo Lazarte</a></h1><br>
+            <h2 class="footer1"><a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" href="https://www.linkedin.com/in/gonzalo-lazarte-desarrollador-web/" target="_blank">Linkedin:</a></h2>
+            <h3 class="footer1"><a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" href="https://gonzal11t0.github.io/Portfolio/" target="_blank">Porfolio</a></h3>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./javaScript/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+</body>
+</html>
