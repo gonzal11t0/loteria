@@ -1,5 +1,23 @@
 window.addEventListener("DOMContentLoaded", function() {
-
+    function ayudas () {  
+        const buttonMensajeAyuda = document.getElementById("buttonMensaje");
+        const ayuda = document.querySelector(".containerAyudas");
+        const cerrarAyuda = document.querySelector(".cerrar-ayuda");
+    
+        function mostrarAyuda() {
+            ayuda.style.display = "block";
+        }
+        function ocultarAyuda() {
+            ayuda.style.display = "none";
+        }
+    
+        buttonMensajeAyuda.addEventListener("click", function(){
+            mostrarAyuda()
+        });
+        cerrarAyuda.addEventListener("click", ocultarAyuda);
+    }
+    ayudas ()
+    
     function validarNumero(numero, inputId) {
         const mensajeError = document.getElementById(`error${inputId}`);
         if (numero   < 0 || numero > 45 || String(numero).length > 2) {
