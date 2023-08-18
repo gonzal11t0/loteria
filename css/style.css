@@ -379,6 +379,17 @@ body{
     align-self:auto;
     margin-top:90px;
 }
+.btnSimular{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #dc3545;
+    cursor: pointer;
+}
 .content {
     padding-top:80px; /* Ajusta la cantidad de margen superior que deseas */
 }

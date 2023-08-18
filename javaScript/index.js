@@ -128,7 +128,6 @@ window.addEventListener("DOMContentLoaded", function() {
         });
     };
 
-
     function generarYMostrarNumerosAzar() {
 
         const divContainerNumerosAlAzar = document.querySelector("#divContainerNumerosAlAzar");
@@ -158,12 +157,11 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 
     function identificarNumerosGanadores(numerosUsuarioArray, numerosGeneradosAlAzarArray){
-
+    
         const sonIguales = JSON.stringify(numerosUsuarioArray) === JSON.stringify(numerosGeneradosAlAzarArray);
         const containerGanastesPerdistes=document.getElementById("containerGanastesPerdistes");
         containerGanastesPerdistes.classList.add("divContainerNumerosAlAzar");
         containerGanastesPerdistes.innerHTML = "";
-
         if(sonIguales){
             const h1ganastes = document.createElement("h1");
             h1ganastes.textContent = "Felicidades Ganastes...";
@@ -175,7 +173,7 @@ window.addEventListener("DOMContentLoaded", function() {
             iconGanastes.setAttribute("type", "solid");
             iconGanastes.setAttribute("color", "#b11f1f");
             
-            h1ganastes.appendChild(iconGanastes); // Agrega el ícono como hijo del elemento h1
+            h1ganastes.appendChild(iconGanastes);
             containerGanastes.appendChild(h1ganastes);
         }else{
             const h1perdistes = document.createElement("h1");
@@ -187,8 +185,22 @@ window.addEventListener("DOMContentLoaded", function() {
             iconPerdistes.setAttribute("type", "solid");
             iconPerdistes.setAttribute("color", "#b11f1f");
             
-            h1perdistes.appendChild(iconPerdistes); // Agrega el ícono como hijo del elemento h1
+            h1perdistes.appendChild(iconPerdistes);
             containerGanastesPerdistes.appendChild(h1perdistes);
+            
+            button=document.createElement("button");
+            button.textContent="Volver a simular";
+            button.classList.add("btnSimular");
+            containerGanastesPerdistes.appendChild(button);
+            button.addEventListener("click", function() {
+                // Asegurarse de que el evento sea desencadenado directamente por el usuario
+                const newWindow = window.open("index.html", "_self");
+                if (newWindow) {
+                    newWindow.focus(); // Enfocar la nueva ventana si se abrió correctamente
+                }
+            });
+            botonVolverAJugar.style.display = "block";
+
         }
     }
 
