@@ -212,8 +212,8 @@ body{
     z-index: 989999;
 }
 .contenidoAyudas{
-    max-width: 960px; /* Establece el ancho máximo */
-    margin: 0 auto; /* Centra horizontalmente */
+    max-width: 960px;
+    margin: 0 auto;
     background-color: #2037ab;
     padding:10px;
     border-radius: 10px;
@@ -230,8 +230,6 @@ body{
 .cerrar-ayuda {
     margin-top: 10px;
 }
-
-
 .main{
     display: flex;
     flex-direction:row;
@@ -239,7 +237,7 @@ body{
     align-items:flex-start;
     justify-content:center; 
     width:960px;
-    height:400px;
+    height:440px;
     background-color: #dddddd;
     margin-top:80px;
     align-self:flex-start;
@@ -288,12 +286,12 @@ body{
     margin-left: 10px;
     margin-right: 10px;
 }
-.mensajeError {
+.mensajeError p {
     position: absolute;
     bottom:120px;
     left:0;
     width: auto;
-    color: red;
+    color: red !important;
     align-items: center;
     font-size:1.1rem;
     gap: 5px;
@@ -317,7 +315,7 @@ body{
     align-content: center;
     justify-content: center;
     position:absolute;
-    bottom:130px;
+    bottom:160px;
     width:100%;
     align-items: center;
     background-color:red;
@@ -347,7 +345,7 @@ body{
     margin-top:18px;
     margin-right: 10px;
 }
-.divContainerNumerosAlAzar{
+.divContainerNumerosAlAzar,.containerGanastesPerdistes{
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;

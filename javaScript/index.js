@@ -157,6 +157,41 @@ window.addEventListener("DOMContentLoaded", function() {
         divContainerNumerosAlAzar.appendChild(ulNumerosGenerados);
     }
 
+    function identificarNumerosGanadores(numerosUsuarioArray, numerosGeneradosAlAzarArray){
+
+        const sonIguales = JSON.stringify(numerosUsuarioArray) === JSON.stringify(numerosGeneradosAlAzarArray);
+        const containerGanastesPerdistes=document.getElementById("containerGanastesPerdistes");
+        containerGanastesPerdistes.classList.add("divContainerNumerosAlAzar");
+        containerGanastesPerdistes.innerHTML = "";
+
+        if(sonIguales){
+            const h1ganastes = document.createElement("h1");
+            h1ganastes.textContent = "Felicidades Ganastes...";
+            h1ganastes.classList = "tituloContainerNumerosJugados";
+            containerGanastesPerdistes.appendChild(h1ganastes);
+
+            const iconGanastes = document.createElement("box-icon");
+            iconGanastes.setAttribute("name", "ghost");
+            iconGanastes.setAttribute("type", "solid");
+            iconGanastes.setAttribute("color", "#b11f1f");
+            
+            h1ganastes.appendChild(iconGanastes); // Agrega el ícono como hijo del elemento h1
+            containerGanastes.appendChild(h1ganastes);
+        }else{
+            const h1perdistes = document.createElement("h1");
+            h1perdistes.textContent = "Lo lamento perdistes... ";
+            h1perdistes.classList = "tituloContainerNumerosJugados";
+
+            const iconPerdistes = document.createElement("box-icon");
+            iconPerdistes.setAttribute("name", "ghost");
+            iconPerdistes.setAttribute("type", "solid");
+            iconPerdistes.setAttribute("color", "#b11f1f");
+            
+            h1perdistes.appendChild(iconPerdistes); // Agrega el ícono como hijo del elemento h1
+            containerGanastesPerdistes.appendChild(h1perdistes);
+        }
+    }
+
     const buttonGenerar = document.getElementById("button-generar");
     buttonGenerar.addEventListener("click", () => {
         if (numerosUsuario()) {
@@ -166,8 +201,9 @@ window.addEventListener("DOMContentLoaded", function() {
                 const numero = parseInt(input.value);
                 numerosElegidos.push(numero);
             }
-            generarYMostrarNumerosAzar();
+            const numerosGeneradosAlAzarArray = generarYMostrarNumerosAzar();
             mostrarNumerosElegidos(numerosElegidos);
+            identificarNumerosGanadores(numerosElegidos,numerosGeneradosAlAzarArray);
         }
     });
 });
