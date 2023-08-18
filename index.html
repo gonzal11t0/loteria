@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
-    <header class="header shake-horizontal">
+    <header role="navigation" aria-label="Menú de la página con los siguientes items: Institucional, Juego Responsable, Rifas y Bingos, Proveedores, Casinos, ALEA, Descargas, Atención al Cliente" class="header shake-horizontal">
         <div class="logo">
             <a href="loteria.html">
-                <img src="https://www.loteriasantafe.gov.ar/templates/loteria/images/logo.png" alt="logo">
+                <img role="img" aria-label="icono de la loteria de santa fe" src="https://www.loteriasantafe.gov.ar/templates/loteria/images/logo.png" alt="logo">
             </a>
         </div>
         <div class="search">
             <form class="form">
-                <input  type="search" name="search" placeholder="Buscar...">
-                <input type="submit" value="Buscar" class="btn btn-danger">
+                <input role="search" aria-label="cuadro de busqueda"   type="search" name="search" placeholder="Buscar...">
+                <input role="search" aria-label="cuadro de buscar la busqueda deseada" type="submit" value="Buscar" class="btn btn-danger">
             </form> 
         </div>
         <div class="menu">
@@ -53,30 +53,30 @@
             </ul>
         </div>
     </header>
-    <div class="banner">
+    <div class="banner" role="banner" aria-label="banner con publicidad del juego">
         <img alt="banner quini 6" src="https://www.loteriasantafe.gov.ar/images/banners/BBB-2023---Slide-Web-Resultados_Slide-Quini6_940x365-resultados.jpg">  
     </div>
-    <main class="main d-flex justify-content-center align-items-center swing-top-fwd">
+    <main role="main" class="main d-flex justify-content-center align-items-center swing-top-fwd">
         <div class="container-fluid">
             <div class="col-2 container-parrafo-container-fluid">
-                <p class="titulo-container-parrafo-container-fluid">Selecciona seis números del 00 al 45:</p>
+                <p role="dialog" aria-label="titulo que indica que seleccionemos seis numeros del 1 al 46" class="titulo-container-parrafo-container-fluid">Selecciona seis números del 00 al 45:</p>
             </div>
-            <div class="container-select-number">
-                <input class="input" required placeholder="numero 1" type="number" id="number1" min="0" max="45">
+            <div role="option" aria-label="seleccione los numeros del 0 al 46" class="container-select-number">
+                <input role="option" aria-label="seleccione un numero" class="input" required placeholder="numero 1" type="number" id="number1" min="0" max="45">
                 <div class="mensajeError" id="errorNumber1"></div>                
-                <input class="input" required placeholder="numero 2" type="number" id="number2" min="0" max="45">
+                <input role="option" aria-label="seleccione un numero" class="input" required placeholder="numero 2" type="number" id="number2" min="0" max="45">
                 <div class="mensajeError" id="errorNumber2"></div>
-                <input class="input" required placeholder="numero 3" type="number" id="number3" min="0" max="45">
+                <input role="option" aria-label="seleccione un numero" class="input" required placeholder="numero 3" type="number" id="number3" min="0" max="45">
                 <div class="mensajeError" id="errorNumber3"></div>               
-                <input class="input" required placeholder="numero 4" type="number" id="number4" min="0" max="45">
+                <input role="option" aria-label="seleccione un numero" class="input" required placeholder="numero 4" type="number" id="number4" min="0" max="45">
                 <div class="mensajeError" id="errorNumber4"></div>
-                <input class="input" required placeholder="numero 5" type="number" id="number5" min="0" max="45">
+                <input role="option" aria-label="seleccione un numero" class="input" required placeholder="numero 5" type="number" id="number5" min="0" max="45">
                 <div class="mensajeError" id="errorNumber5"></div>
-                <input class="input" required placeholder="numero 6" type="number" id="number6" min="0" max="45">
+                <input role="option" aria-label="seleccione un numero" class="input" required placeholder="numero 6" type="number" id="number6" min="0" max="45">
                 <div class="mensajeError" id="errorNumber6"></div>
             </div>
             <div class="container-button">
-                <button type="submit" id="button-generar" class="btn btn-danger">Enviar numeros</button>
+                <button role="button" aria-label="Boton para simular el sorteo" type="submit" id="button-generar" class="btn btn-danger">Enviar numeros</button>
             </div>
             <div class="mensajeErrorContainer" id="mensajeErrorContainer"></div>    
             <div class="containerNumerosJugados" id="containerNumerosJugados"></div>
@@ -85,11 +85,11 @@
         </div>
     </main>
     <div class="content"></div>
-    <footer class="footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <footer role="textbox" aria-label="footer con el nombre del desarrollador:Gonzalo Lazarte,link de su Linkedin y portfolio" class="footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
             <h1 class="footer1"><a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">Gonzalo Lazarte</a></h1><br>
-            <h2 class="footer1"><a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" href="https://www.linkedin.com/in/gonzalo-lazarte-desarrollador-web/" target="_blank">Linkedin:</a></h2>
-            <h3 class="footer1"><a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" href="https://gonzal11t0.github.io/Portfolio/" target="_blank">Porfolio</a></h3>
+            <h2 role="link" aria-label="boton para ir al Linkedin" class="footer1"><a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" href="https://www.linkedin.com/in/gonzalo-lazarte-desarrollador-web/" target="_blank">Linkedin:</a></h2>
+            <h3 role="link" aria-label="boton para ir al portfolio" class="footer1"><a class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" href="https://gonzal11t0.github.io/Portfolio/" target="_blank">Porfolio</a></h3>
         </div>
     </footer>
     <script type="text/javascript" src="./javaScript/index.js"></script>
