@@ -193,6 +193,17 @@ body{
     background-color: #EC833B;
     margin-bottom: 20px;
 }
+.container-select-number{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+}
+.container-select-number input{
+    width:900px;
+    margin-right:20px;
+    margin-top:80px;
+}
 .container-select-number input[type="number"] {
     margin:0 10px;
     border:4px solid #dc0c0c;
@@ -214,7 +225,6 @@ body{
     margin-left: 10px;
     margin-right: 10px;
 }
-
 .mensajeError {
     position: absolute;
     bottom:120px;
@@ -253,7 +263,7 @@ body{
 .mensajeErrorContainer h1{
     color: rgb(255, 253, 253);
     font-size:1.3rem;
-    gap: 5px;
+    gap:5px;
 }
 .containerNumerosJugados{
     display:flex;
@@ -262,15 +272,15 @@ body{
     justify-items:center;
     justify-content:center;
     width:auto;
-    background-color: #EC833B;
-
+    background-color:#EC833B;
+    margin-top: 15px;
 }
 .containerNumerosJugados h2, .tituloContainerNumerosJugados,.divContainerNumerosAlAzar h2{
     list-style: none;
     color:#ffffff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:1.3rem;
-    margin-bottom:10px;
+    margin-bottom:2px;
     margin-top:18px;
     margin-right: 10px;
 }
@@ -283,26 +293,6 @@ body{
     width:auto;
     background-color: #EC833B;
 }
-.container-select-number{
-    display:flex;
-    flex-direction:row;
-    flex-wrap: nowrap;
-    justify-content:space-around;
-}
-.container-select-number input{
-    width:900px;
-    margin-right:20px;
-    margin-top:80px;
-}
-.container-button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    align-self:auto;
-    margin-top:80px;
-}
-
 .listaNumerosGenerados {
     list-style-type: none;
     padding: 0;
@@ -310,9 +300,8 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #be0926;
+    background-color: #EC833B;
 }
-
 .listaNumerosGenerados li {
     margin: 5px;
     padding: 10px;
@@ -321,8 +310,14 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.3rem;
 }
-
-
+.container-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-self:auto;
+    margin-top:90px;
+}
 .content {
     padding-top:80px; /* Ajusta la cantidad de margen superior que deseas */
 }

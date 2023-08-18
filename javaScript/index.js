@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function() {
-    console.log("Punto de control 1");
+
     function validarNumero(numero, inputId) {
         const mensajeError = document.getElementById(`error${inputId}`);
         if (numero   < 0 || numero > 45 || String(numero).length > 2) {
@@ -11,21 +11,21 @@ window.addEventListener("DOMContentLoaded", function() {
         mensajeError.style.display = "none";
         return true;
     }
-    console.log("Punto de control 2");
+
     function mostrarMensajeError(mensaje) {
         const mensajeErrorContainer = document.getElementById("mensajeErrorContainer");
         mensajeErrorContainer.innerHTML = `<h1>${mensaje}</h1>`;
     }
-    console.log("Punto de control 3");
+
     function ocultarMensajeError() {
         const mensajeErrorContainer = document.getElementById("mensajeErrorContainer");
         mensajeErrorContainer.innerHTML = "";
     }
-    console.log("Punto de control 4");
+
     function inputVacio(input) {
         return input.value === '';
     }
-    console.log("Punto de control 5");
+
     function verificarInputsVacios() {
         const inputs = document.querySelectorAll('.input');
         for (const input of inputs) {
@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function() {
         ocultarMensajeError(); 
         return true;
     };
-    console.log("Punto de control 6");
+
     function numerosUsuario(){  
 
         const mensajeError = document.getElementsByClassName("mensajeError");
@@ -91,7 +91,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
             containerNumerosJugados.appendChild(h2);
         });
-        console.log(numerosJugados);
+        return(numerosJugados);
     };
 
     function mostrarNumerosElegidos(numerosElegidos) {
@@ -109,18 +109,19 @@ window.addEventListener("DOMContentLoaded", function() {
             containerNumerosJugados.appendChild(h2);
         });
     };
-    console.log("Punto de control 7");
+
+
     function generarYMostrarNumerosAzar() {
-        console.log("Punto de control 8");
-        const divContainerNumerosAlAzar = document.querySelector(".divContainerNumerosAlAzar");
-        console.log("Punto de control 8");
+
+        const divContainerNumerosAlAzar = document.querySelector("#divContainerNumerosAlAzar");
+
         const numerosGeneradosAlAzar = [];
-        console.log("Punto de control 9");
+
         for (let i = 0; i < 6; i++) {
             const numeroAleatorio = Math.floor(Math.random() * 46);
             numerosGeneradosAlAzar.push(numeroAleatorio);
         }
-        console.log("Punto de control 9");
+
         const ulNumerosGenerados = document.createElement("ul");
         ulNumerosGenerados.classList = "listaNumerosGenerados";
         
@@ -128,17 +129,16 @@ window.addEventListener("DOMContentLoaded", function() {
         h1NumerosGenerados.textContent = "Números generados al azar:";
         h1NumerosGenerados.classList = "tituloContainerNumerosJugados";
         ulNumerosGenerados.appendChild(h1NumerosGenerados);
-        console.log("Punto de control 10");
+
         numerosGeneradosAlAzar.forEach(numero => {
             const li = document.createElement("li");
             li.textContent = numero;
             ulNumerosGenerados.appendChild(li);
-            console.log("Punto de control 11");
         });
     
         divContainerNumerosAlAzar.appendChild(ulNumerosGenerados);
     }
-    console.log("Punto de control 12");
+
     const buttonGenerar = document.getElementById("button-generar");
     buttonGenerar.addEventListener("click", () => {
         if (numerosUsuario()) {
@@ -148,10 +148,8 @@ window.addEventListener("DOMContentLoaded", function() {
                 const numero = parseInt(input.value);
                 numerosElegidos.push(numero);
             }
-            console.log("Punto de control 13");
             generarYMostrarNumerosAzar();
             mostrarNumerosElegidos(numerosElegidos);
         }
     });
-    console.log("Punto de control 14");
 });
