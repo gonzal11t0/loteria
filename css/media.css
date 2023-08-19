@@ -1,0 +1,12 @@
+@media (max-width:500px){
+    .nav{
+        color: #0000 !important;
+    }
+    .nav li a:hover {
+        color:#ffff;
+        text-decoration:none;
+    }
+    .nav2 ul li a:hover{
+        text-decoration:none;
+    }
+}

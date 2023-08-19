@@ -17,7 +17,7 @@ body{
     flex-direction: row;
     flex-wrap:wrap;
     align-items:flex-start;
-    width:960px;
+    width:800px;
     height:auto;
     background-color: #011e35;
     justify-content:center; 
@@ -160,14 +160,16 @@ body{
 .otro li a:hover{
     text-decoration: underline solid 5px green;
 }
+.containerBanner{
+    width:800px;    
+    padding:0px;
+    margin:0 auto;
+}
 .banner{
-    width: 960px;
-    padding: 0px;
-    margin: 0 auto;
-    height: 220px;
+    height: 230px;
     overflow: hidden;
-    padding-left:12px;
-    padding-top: 10px;
+    padding-left:0px;
+    padding-top:10px;
 }
 .containerAyuda{
     display: flex;
@@ -175,7 +177,7 @@ body{
     flex-wrap: wrap;
     background-color: #011e35;
     color: #ffff;
-    width:960px;
+    width:800px;
     height:auto;
     padding:7px;
     box-sizing: border-box;
@@ -212,7 +214,7 @@ body{
     z-index: 989999;
 }
 .contenidoAyudas{
-    max-width: 960px;
+    width:800px;
     margin: 0 auto;
     background-color: #2037ab;
     padding:10px;
@@ -236,7 +238,7 @@ body{
     flex-wrap:wrap;
     align-items:flex-start;
     justify-content:center; 
-    width:960px;
+    width:800px;
     height:440px;
     background-color: #dddddd;
     margin-top:80px;
@@ -397,14 +399,14 @@ body{
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
-    align-items: center!important;
+    align-items: last baseline!important;
     align-content: center!important;
     justify-content: center!important;
     justify-items: center!important;
     position: relative;
     padding-top:50px;
     background-color: #011e35;
-    width: 960px;
+    width:800px;
 }
 .footer:hover{
     background-color: #05487f;
@@ -416,7 +418,7 @@ body{
     font-size: 0.8rem !important;
     margin-left:20px;
     text-decoration: underline!important;
-}
+}   
 
 
 /* ----------------------------------------------
