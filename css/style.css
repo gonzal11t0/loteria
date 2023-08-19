@@ -396,17 +396,13 @@ body{
     padding-top:80px; /* Ajusta la cantidad de margen superior que deseas */
 }
 .footer{
-    display: flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    align-items: last baseline!important;
-    align-content: center!important;
-    justify-content: center!important;
-    justify-items: center!important;
+    display:flex;
+    flex-direction:column;
+    align-items: baseline;
     position: relative;
     padding-top:50px;
     background-color: #011e35;
-    width:800px;
+    width:500px;
 }
 .footer:hover{
     background-color: #05487f;
