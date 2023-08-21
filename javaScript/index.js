@@ -156,12 +156,13 @@ window.addEventListener("DOMContentLoaded", function() {
         divContainerNumerosAlAzar.appendChild(ulNumerosGenerados);
     }
 
-    function identificarNumerosGanadores(numerosUsuarioArray, numerosGeneradosAlAzarArray){
-    
-        const sonIguales = JSON.stringify(numerosUsuarioArray) === JSON.stringify(numerosGeneradosAlAzarArray);
+    function identificarNumerosGanadores(numerosUsuarioArray, numerosGeneradosAlAzar){
+
+        const sonIguales = JSON.stringify(numerosUsuarioArray) === JSON.stringify(numerosGeneradosAlAzar);
         const containerGanastesPerdistes=document.getElementById("containerGanastesPerdistes");
         containerGanastesPerdistes.classList.add("divContainerNumerosAlAzar");
         containerGanastesPerdistes.innerHTML = "";
+
         if(sonIguales){
             const h1ganastes = document.createElement("h1");
             h1ganastes.textContent = "Felicidades Ganastes...";
@@ -179,7 +180,6 @@ window.addEventListener("DOMContentLoaded", function() {
             const h1perdistes = document.createElement("h1");
             h1perdistes.textContent = "Lo lamento perdistes... ";
             h1perdistes.classList = "tituloContainerNumerosJugados";
-
             const iconPerdistes = document.createElement("box-icon");
             iconPerdistes.setAttribute("name", "ghost");
             iconPerdistes.setAttribute("type", "solid");
@@ -187,7 +187,7 @@ window.addEventListener("DOMContentLoaded", function() {
             
             h1perdistes.appendChild(iconPerdistes);
             containerGanastesPerdistes.appendChild(h1perdistes);
-            
+
             button=document.createElement("button");
             button.textContent="Volver a simular";
             button.classList.add("btnSimular");
@@ -199,10 +199,8 @@ window.addEventListener("DOMContentLoaded", function() {
                     newWindow.focus(); // Enfocar la nueva ventana si se abrió correctamente
                 }
             });
-            botonVolverAJugar.style.display = "block";
-
-        }
-    }
+        };
+    };
 
     const buttonGenerar = document.getElementById("button-generar");
     buttonGenerar.addEventListener("click", () => {
