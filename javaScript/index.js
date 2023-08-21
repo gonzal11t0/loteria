@@ -203,7 +203,9 @@ window.addEventListener("DOMContentLoaded", function() {
     };
 
     const buttonGenerar = document.getElementById("button-generar");
+    let cont=0;
     buttonGenerar.addEventListener("click", () => {
+        cont=cont+1;
         if (numerosUsuario()) {
             const numerosElegidos = [];
             for (let i = 1; i <= 6; i++) {
@@ -214,6 +216,12 @@ window.addEventListener("DOMContentLoaded", function() {
             const numerosGeneradosAlAzarArray = generarYMostrarNumerosAzar();
             mostrarNumerosElegidos(numerosElegidos);
             identificarNumerosGanadores(numerosElegidos,numerosGeneradosAlAzarArray);
+
+            buttonGenerar.disabled = true;
+            if (cont > 1) {
+                alert("Error: para volver a jugar, presione 'Volver a simular");  // 'Alert' debe ser 'alert' con "a" minúscula
+                buttonGenerar.innerHTML = "";
+            }
         }
     });
 });
