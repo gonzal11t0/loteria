@@ -218,7 +218,7 @@ window.addEventListener("DOMContentLoaded", function() {
             identificarNumerosGanadores(numerosElegidos,numerosGeneradosAlAzarArray);
 
             buttonGenerar.disabled = true;
-            if (cont > 1) {
+            if (cont >=2) {
                 alert("Error: para volver a jugar, presione 'Volver a simular");  // 'Alert' debe ser 'alert' con "a" minúscula
                 buttonGenerar.innerHTML = "";
             }
