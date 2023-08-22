@@ -18,6 +18,10 @@ window.addEventListener("DOMContentLoaded", function() {
     }
     ayudas ()
     
+    function verificarNumerosDuplicados(numeros) {
+        const numerosSet=  new Set(numeros);
+        return numerosSet.size === numeros.length;
+    }
     function validarNumero(numero, inputId) {
         const mensajeError = document.getElementById(`error${inputId}`);
         if (numero   < 0 || numero > 45 || String(numero).length > 2) {
@@ -213,13 +217,17 @@ window.addEventListener("DOMContentLoaded", function() {
                 const numero = parseInt(input.value);
                 numerosElegidos.push(numero);
             }
+            if (!verificarNumerosDuplicados(numerosElegidos)) {
+                alert("Error: No se permiten números duplicados.");
+                const newWindow = window.open("index.html", "_self");
+                return;
+            }
             const numerosGeneradosAlAzarArray = generarYMostrarNumerosAzar();
             mostrarNumerosElegidos(numerosElegidos);
             identificarNumerosGanadores(numerosElegidos,numerosGeneradosAlAzarArray);
 
             buttonGenerar.disabled = true;
             if (cont >=2) {
-                alert("Error: para volver a jugar, presione 'Volver a simular");  // 'Alert' debe ser 'alert' con "a" minúscula
                 buttonGenerar.innerHTML = "";
             }
         }
